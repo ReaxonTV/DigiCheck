@@ -1,3 +1,18 @@
+var kategorieScores = JSON.parse(localStorage.getItem("aggregatedResults")) || {
+  datenverarbeitung: 0,
+  kommunikation: 0,
+  erstellung: 0,
+  sicherheit: 0,
+  problemloesung: 0,
+};
+
+// Laden der Daten aus dem LocalStorage
+var storedData = JSON.parse(localStorage.getItem("kategorieScores"));
+if (storedData) {
+  kategorieScores = storedData;
+}
+
+// Anpassen der Daten für das Diagramm
 var data = {
   labels: [
     "Datenverarbeitung",
@@ -8,8 +23,14 @@ var data = {
   ],
   datasets: [
     {
-      label: "",
-      data: [3, 2, 4, 3, 6],
+      label: "Wert",
+      data: [
+        kategorieScores.datenverarbeitung,
+        kategorieScores.kommunikation,
+        kategorieScores.erstellung,
+        kategorieScores.sicherheit,
+        kategorieScores.problemloesung,
+      ],
       backgroundColor: "rgba(255, 9, 132, 0.2)",
       borderColor: "rgba(255, 99, 132, 1)",
       borderWidth: 1,
@@ -25,17 +46,16 @@ var data = {
 };
 
 var options = {
-  scale: {
-    ticks: {
-      suggestedMin: 0,
-      suggestedMax: 5,
-      stepSize: 1,
-    },
-  },
-  legend: {
-    labels: {
-      fontSize: 0,
-    },
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+          suggestedMax: 5,
+          stepSize: 1,
+        },
+      },
+    ],
   },
 };
 

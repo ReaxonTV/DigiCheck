@@ -15,10 +15,10 @@ submitButton.addEventListener("click", function () {
 
   // alle Fragen durchgehen
   const questions = document.querySelectorAll(".kategorie select");
+
   questions.forEach(function (question, index) {
     // die Antwort auswählen
     const answer = question.value;
-
     // den Score für die Antwort berechnen und speichern
     let score;
     switch (answer) {
@@ -38,9 +38,8 @@ submitButton.addEventListener("click", function () {
         score = null;
         break;
     }
-    results[`question${index + 1}`] = score;
 
-    // aggregierte Scores berechnen
+    // Gesamtpunktzahl für jede Kategorie berechnen
     if (index < 6) {
       kategorieScores.datenverarbeitung += score;
     } else if (index < 12) {
@@ -54,17 +53,26 @@ submitButton.addEventListener("click", function () {
     }
   });
 
-  // die aggregierten Ergebnisse in das Ergebnisobjekt einfügen
-  results["kategorieScores"] = kategorieScores;
+  // Durchschnittsscore für jede Kategorie berechnen und in das Ergebnisobjekt einfügen
+  const durchschnittScores = {
+    datenverarbeitung: kategorieScores.datenverarbeitung / 6,
+    kommunikation: kategorieScores.kommunikation / 6,
+    erstellung: kategorieScores.erstellung / 9,
+    sicherheit: kategorieScores.sicherheit / 9,
+    problemloesung: kategorieScores.problemloesung / 6,
+  };
 
-  // die Ergebnisse als JSON-String speichern
-  const jsonResults = JSON.stringify(results);
+  results["durchschnittScores"] = durchschnittScores;
 
-  // die Ergebnisse in einer JSON-Datei speichern (z.B. "results.json")
-  const blob = new Blob([jsonResults], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "results.json";
-  a.click();
+  // Nur die durchschnittlichen Ergebnisse in einer Variablen speichern
+  const aggregatedResults = durchschnittScores;
+
+  // Hier kannst du jetzt die weitere Verarbeitung der aggregierten Ergebnisse durchführen
+  // Zum Beispiel: die aggregierten Ergebnisse in der Konsole ausgeben
+  console.log(aggregatedResults);
+
+  // Save the results to the local storage
+  localStorage.setItem("aggregatedResults", JSON.stringify(aggregatedResults));
+
+  console.log("Aggregated results saved to local storage");
 });
