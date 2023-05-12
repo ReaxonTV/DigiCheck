@@ -1,6 +1,8 @@
 # DigiCheck
 DIgiCheck Data Hackdays BE
+
 Einleitung
+
 Der Kanton Bern möchte eine Plattform für seine Mitarbeitenden auf dem sich die Mitarbeitenden in fünf 
 verschiedenen Kategorien selbsteinschätzen können. Die fünf Kategorien sind, Datenverarbeitung, Kommunikation,
 Erstellung von Inhalten, Sicherheit und Problemlöseverhalten. Für jede Kategorie muss die Person 6 – 9 Fragen beantworten,
