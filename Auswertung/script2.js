@@ -8,14 +8,14 @@ var data = {
   ],
   datasets: [
     {
-      label: "",
+      label: "Dein Ergebnis",
       data: [3, 2, 4, 3, 6],
       backgroundColor: "rgba(255, 9, 132, 0.2)",
       borderColor: "rgba(255, 99, 132, 1)",
       borderWidth: 1,
     },
     {
-      label: "",
+      label: "Durchschnitt aller Teilnehmer",
       data: [0, 0, 0, 0, 0],
       backgroundColor: "rgba(0, 0, 0, 0)",
       borderColor: "rgba(0, 0, 0, 0)",
