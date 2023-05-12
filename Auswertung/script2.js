@@ -36,7 +36,7 @@ var data = {
       borderWidth: 1,
     },
     {
-      label: "",
+      label: "Durchschnitt aller Teilnehmer",
       data: [0, 0, 0, 0, 0],
       backgroundColor: "rgba(0, 0, 0, 0)",
       borderColor: "rgba(0, 0, 0, 0)",
