@@ -6,7 +6,11 @@ Einleitung
 Der Kanton Bern möchte eine Plattform für seine Mitarbeitenden auf dem sich die Mitarbeitenden in fünf 
 verschiedenen Kategorien selbsteinschätzen können. Die fünf Kategorien sind, Datenverarbeitung, Kommunikation,
 Erstellung von Inhalten, Sicherheit und Problemlöseverhalten. Für jede Kategorie muss die Person 6 – 9 Fragen beantworten,
-wobei sie von 0 = «Keine Erfahrung» bis 3 = «Fortgeschrittene Anwendung» auswählen kann. Nach dem Ausfüllen der 
+wobei sie von 0 = «Keine Erfahrung» bis 3 = «Fortgeschrittene Anwendung» auswählen kann. 
+
+Ziel
+
+Nach dem Ausfüllen der 
 Selbsteinschätzung soll der Person ein Diagramm gezeigt werden mit einem Überblick über ihre Stärken und Schwächen
 innerhalb der fünf Kategorien. Ebenfalls sollen ihr passende Lernmaterialien in Form von Videos, 
 Bücher etc. zur Verfügung gestellt werden. So soll sichergestellt werden, dass alle Mitarbeiter in den Bereichen 
