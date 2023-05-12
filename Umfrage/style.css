@@ -1,0 +1,33 @@
+.kategorie {
+  color: brown;
+  background-color: yellow;
+  margin: 2cm;
+  border: 5px solid black;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: blue;
+}
+
+ul {
+  list-style: none;
+}
+
+.kategorie label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.kategorie select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}

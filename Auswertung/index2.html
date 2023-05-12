@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auswertung DigiCheck</title>
+  <link rel="stylesheet" href="style2.css" />
+ <!-- <link rel="stylesheet" href="../styles.css" /> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>    
+    <div class="container">
+    <div class="sidebar">
+        <button onclick="window.location.href='../index.html'" class="button"><img src="../icons/home.png" style="padding-right: 2px;" width="30px" height="30px">Home</img></button>
+        <button class="button"><img src="../icons/user.png" style="padding-right: 2px;" width="30px" height="30px">Profil</img></button>
+        <button onclick="window.location.href='../Umfrage/index.html'" class="button"><img src="../icons/clipboard.png" style="padding-right: 2px;" width="30px" height="30px">Umfrage</img></button>
+        <button onclick="window.location.href='index2.html'" class="button"><img src="../icons/chart.png" style="padding-right: 2px;" width="30px" height="30px">Auswertung</img></button>
+    </div></header>
+  <div class="container">
+    <div class="section">
+      <h2>Dein persönliches Ergebnis</h2>
+      <p>Hier ist deine persönliche Auswertung des DigiChecks:</p>
+      <div id="chart-container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Erklärung der Bereiche</h2>
+      <div class="bereiche">
+        <p>
+          <strong>Datenverarbeitung</strong>
+          <br />
+          Die Fähigkeit, Informationen zu suchen, deren Zuverlässigkeit
+          einzuschätzen, zweckmässig zu speichern und wieder abzurufen.
+        </p>
+        <p>
+          <strong>Kommunikation</strong>
+          <br />
+          Die Fähigkeit neue Formen der Zusammenarbeit und Kommunikation zu
+          adaptieren.
+        </p>
+        <p>
+          <strong>Erstellung von Inhalten</strong>
+          <br />
+          Die Fertigkeit Inhalte wie Bilder, Tabellen oder Videos innerhalb des
+          gesetzlichen Rahmens zu verarbeiten.
+        </p>
+        <p>
+          <strong>Sicherheit</strong>
+          <br />
+          Die Fähigkeit (mobile) Devices, persönliche Daten sowie die eigene
+          Work-Life-Balance zu schützen.
+        </p>
+        <p>
+          <strong>Problemlösung</strong>
+          <br />
+          Die Fähigkeit individuellen Bedarf zu identifizieren und digitale
+          Werkzeuge zielführend einzusetzen, sodass (technische) Probleme gelöst
+          werden.
+        </p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Deine Empfehlung</h2>
+      <p>
+        Hier findest du eine Empfehlung, wie du dein Ergebnis verbessern kannst:
+        <ul>
+          <li>Datenverarbeitung: <script href="../auswertung.js">
+            auswertung_datenverarbeitung()
+            </script></li>
+        </ul>
+      </p>
+      <!-- Hier kommt die Empfehlung -->
+    </div>
+  </div>
+  <script src="script2.js"></script>
+</body>
+</html>

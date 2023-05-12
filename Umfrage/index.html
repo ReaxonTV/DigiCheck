@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="Umfrage" content="width=device-width, initial-scale=1" />
+
+    <title>Umfrage</title>
+    <meta name="Umfrage DigiCheck" content="DigiCheck" />
+    <meta name="Joel Bettler" content="DigiCheck" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sidebar">
+          <button onclick="window.location.href='../index.html'" class="button"><img src="../icons/home.png" style="padding-right: 2px;" width="30px" height="30px">Home</img></button>
+          <button class="button"><img src="../icons/user.png" style="padding-right: 2px;" width="30px" height="30px">Profil</img></button>
+          <button onclick="window.location.href='../Umfrage/index.html'" class="button"><img src="../icons/clipboard.png" style="padding-right: 2px;" width="30px" height="30px">Umfrage</img></button>
+          <button onclick="window.location.href='../Auswertung/index2.html'" class="button"><img src="../icons/chart.png" style="padding-right: 2px;" width="30px" height="30px">Auswertung</img></button>
+      </div></header>
+    <h1>Willkommen zur Umfrage</h1>
+    <ul>
+      <div class="kategorie">
+        <li>
+          <h2>Datenverarbeitung</h2>
+          <ul>
+            <li>
+              <label for="q1"
+                >Wie gut kennst du dich mit Suchmaschinen aus?</label
+              >
+              <select id="q1" onchange="updateScore('q1', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">
+                  Ich kann mithilfe einer Suchmaschine (z.B. Google, Yahoo,
+                  Bing) online nach Informationen suchen.
+                </option>
+                <option value="c">
+                  Ich kann die am besten geeigneten Schlüsselwörter
+                  identifizieren, die zur Breite und Tiefe des Themas passen.
+                  Ich kann zu-dem einige grundlegende Filter bei der Suche
+                  be-nutzen (z.B. Bilder, Videos oder Karten suchen)
+                </option>
+                <option value="d">
+                  Ich verstehe, wie Suchmaschinen arbeiten, Ergebnisse
+                  einordnen und anzeigen. Ich kann abschätzen, wie sich der
+                  Einsatz von fortgeschrittenen Filtern (z.B. Datum, Autor,
+                  Medium, Dateiformat, Bildgrösse) auf das Suchergebnis
+                  auswirkt und kann damit die Ergebnisse gezielt einschränken.
+                </option>
+              </select>
+            </li>
+            <li>
+              <label for="q2"
+                >Kannst du die Zuverlässigkeit von Quellen richtig
+                einschätzen?</label
+              >
+              <select id="q2" onchange="updateScore('q2', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">
+                  Ich weiss, dass nicht alle Informationen im Internet
+                  zuverlässig sind (z.B. Fake News).
+                </option>
+                <option value="c">
+                  Ich weiss, wie man durch bestimmte Kriterien die
+                  Zuverlässigkeit von Informationen einschätzen kann, wende es
+                  aber nicht immer an.
+                </option>
+                <option value="d">
+                  Ich prüfe immer kritisch, ob eine online gefundene Information
+                  zuverlässig ist. Falls nötig, vergleiche ich dazu mehrere
+                  Quellen miteinander.
+                </option>
+              </select>
+            </li>
+            <li>
+              <label for="q3"
+                >Wie gut kennst du dich mit Speicheroptionen aus?</label
+              >
+              <select id="q3" onchange="updateScore('q3', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">
+                  Ich kann Inhalte oder Dateien (z. B. Texte, Bilder, Musik,
+                  Videos, Internetseiten) abspeichern und wieder abrufen.
+                </option>
+                <option value="c">
+                  Ich ordne Informationen systematisch, indem ich Ordner und
+                  Markierungen nutze, um Daten einfacher abzurufen.
+                </option>
+                <option value="d">
+                  Ich weiss, welches Dateiformat für welchen Zweck am besten
+                  geeignet ist und nutze entsprechend verschiedene Formate
+                  (z.B. tiefe oder hohe Auflösung im E-Mail-Verkehr; JPG, PNG
+                  oder Rohdaten-format für Bilder).
+                </option>
+              </select>
+            </li>
+            <li>
+              <label for="q4">Wie vertraut bist du mit Clouds?</label>
+              <select id="q4" onchange="updateScore('q4', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">
+                  Ich weiss, was eine Cloud ist und wozu sie verwendet wird.
+                </option>
+                <option value="c">
+                  Ich weiss, wie ich Dateien (z. B. Dokumente, Bilder, Videos)
+                  zwischen Ordnern, Geräten oder in die Cloud kopieren und
+                  verschieben kann.
+                </option>
+                <option value="d">
+                  Ich gehe mit Sorgfalt vor, wenn ich entscheide, wo und wie
+                  digitale Inhalte gesichert und gespeichert werden. Ich
+                  berücksichtige bei der Speicherung insbesondere die
+                  Sicherheit, Zugänglichkeit und Rechtmässigkeit.
+                </option>
+              </select>
+            </li>
+            <li>
+              <label for="q5">Was weisst du über Backups?</label>
+              <select id="q5" onchange="updateScore('q5', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">
+                  Ich weiss, dass es verschiedene Speichermedien gibt (z. B.
+                  interne oder externe Festplatte, USB-Speicher, Pen Drive,
+                  Speicherkarte).
+                </option>
+                <option value="c">
+                  Ich kann wichtige Dateien wie z.B. Dokumente, Bilder oder mein
+                  Adressbuch auf meinem Telefon, Computer oder Tablet an einen
+                  sicheren Ort duplizieren (Backups).
+                </option>
+                <option value="d">
+                  Ich erstelle regelmässig Backups und bin problemlos in der
+                  Lage, Daten auf allen relevanten digitalen Geräten
+                  wiederherzustellen.
+                </option>
+              </select>
+              <li>
+                <label for="q6">Welche Suchstrategien kennst und verwendest du?</label>
+                <select id="q6" onchange="updateScore('q6', 'score1')">
+                  <option value="">Bitte auswählen</option>
+                  <option value="a">Damit bin ich nicht vertraut.</option>
+                  <option value="b">
+                    Wenn ich eine mir fremde Datenbank vor mir habe (z.B. eine Excel-Tabelle), dann suche ich manuell (Scrollen) nach dem für mich relevanten Inhalt.
+                  </option>
+                  <option value="c">
+                    Ich kann die gängigsten Tastenkombinationen (Hotkeys) anwenden, um mich in einer Datenbank zurechtzufinden. Dazu zählen allen voran Rückgängig machen, Suchen, Screenshot, fetter Text, Navigation, Zoom.
+                  </option>
+                  <option value="d">
+                    Ich kann Datenbanken selbst erstellen, um grosse Datenmengen zu speichern und effizient zu nutzen. Dazu benutze ich z.B. Excel, Google Sheets, MySQL, Microsoft Access oder Oracle.
+                  </option>
+                </select>
+              </li>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="kategorie">
+        <li>
+          <h2>Kommunikation</h2>
+          <ul>
+            <li>
+              <label for="q1">Wie gut kennst du dich mit sozialen Netzwerken aus?</label>
+              <select id="q1" onchange="updateScore('q1', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kenne Soziale Netzwerke (z.B. Facebook, Instagram, Twitter, WhatsApp).</option>
+                <option value="c">Ich nutze soziale Netzwerke und weiss, wie ich ändern kann, mit wem ich Inhalte teile (z. B. Freunde, Freunde von Freunden, alle).</option>
+                <option value="d">Ich weiss, dass viele Kommunikationsdienste und soziale Medien kostenlos sind, weil sie durch Werbung bezahlt werden. Ich weiss, dass ich durch die Benutzung dieser Dienste deren Anbietern die Erlaubnis erteile, Daten über mich zu sammeln und gewinnbringend zu verkaufen.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q2">Wie gut weisst du über den Einfluss von sozialen Netzwerken auf die Demokratie Bescheid?</label>
+              <select id="q2" onchange="updateScore('q2', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich verwende soziale Netzwerke wie Facebook, Instagram, LinkedIn, ohne über deren Funktionsweise nachzudenken.</option>
+                <option value="c">Beim Verwenden bin ich mir bewusst, dass bei den meisten und bekanntesten sozialen Netwerken Algorithmen meine Likes, Posts und weitere Aktivitäten (z.B. wie lange ich ein Bild anschaue) erfassen und mir gestützt darauf ähnlichen Inhalte anzeigt (sog. Filterblase bzw. Bubble).</option>
+                <option value="d">Ich weiss, dass soziale Medien und Netzwerke Gesellschaft und Demokratie fördern wie auch schwächen können. Einerseits vereinfachen sie bspw. den Austausch von Ideen, Meinungen und Kritik. Andererseits haben die verwendeten Algorithmen z. B. die Tendenz, extremen Inhalten zu mehr Reichweite zu verhelfen, um mehr Aufmerksamkeit und Nutzung zu generieren.
+                  </option>
+              </select>
+            </li>
+            <li>
+              <label for="q3">Wie geübt bist du mit Videokonferenzen?</label>
+              <select id="q3" onchange="updateScore('q3', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kenne Programme, um über das Internet Videokonferenzen abzuhalten (z.B. Microsoft Teams, Google Meet, Skype, Zoom).</option>
+                <option value="c">Ich benutze solche Programme regelmässig und deren Bedienung fällt mir leicht. Ausserdem kenne ich einige erweiterte Funktionen.</option>
+                <option value="d">Es fällt mir leicht, solche erweiterten Funktionen von solchen E-Meeting-Programmen (z. B. Videokonferenz, Datenaustausch, Application-Sharing, gemeinsame Nutzung von Kalendern) anzuwenden.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q4">Wie vertraut bist du mit dem Austausch von Dateien über das Internet?</label>
+              <select id="q4" onchange="updateScore('q4', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kenne Programme, um online Dateien miteinander zu teilen (z.B. Google Drive, One Drive, DropBox).</option>
+                <option value="c">Ich weiss, welche Programme ich in meinem Arbeitsalltag beim Kanton Bern verwenden darf. Ich kann solche Programme benutzen, um Dateien mit anderen auszutauschen.</option>
+                <option value="d">Ich benutze diese Programme regelmässig und bin mir dabei stets der Vor- und Nachteile bewusst, insbesondere etwaiger Transfer der Daten in Länder mit geringerem Datenschutzniveau oder Sicherheit der Daten vor Hackerangriffen.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q5">Wie entwickelt sind deine Kenntnisse über Online-Zusammenarbeit?</label>
+              <select id="q5" onchange="updateScore('q5', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kenne Programme, um online mit anderen an einem gleichen Dokument zusammenzuarbeiten (z.B. Google Docs, Microsoft Teams).</option>
+                <option value="c">Ich weiss, wie man ein gemeinsames Online-Dokument, das jemand anderes erstellt hat, bearbeitet (z.B. den Text verändern oder ein Bild einfügen).</option>
+                <option value="d">Ich kann Inhalte mittels solcher Online-Kollaborationsprogrammen selber erstellen, andere dazu einladen und Berechtigungen für die Zusammenarbeit erteilen.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q6">Wie oft nimmst du digitale Self-Service-Angebote in Anspruch?</label>
+              <select id="q6" onchange="updateScore('q6', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass ich digitale Technologien benutzen kann, um mit Dienstleistungsbetrieben (wie öffentliche Verwaltungen, Banken, Krankenhäuser) zu interagieren.</option>
+                <option value="c">Ich kann einige Funktionen von Online Services verwenden: Ich kann Zahlungen online abwickeln, im Internet Dinge kaufen und E-Government-Dienstleistungen in Anspruch nehmen (z. B. Steuererklärung online erledigen, Termine mit Behörden bspw. zum Impfen über das Internet vereinbaren oder Self-Service-Portal vom Kanton Bern nutzen).</option>
+                <option value="d">Ich versuche überall, wo es möglich und angebracht ist, den Online Self-Service einem Anruf, einer E-Mail oder der persön-licher Nachfrage vorzuziehen.</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="kategorie">
+        <li>
+          <h2>Erstellung von Inhalten</h2>
+          <ul>
+            <li>
+              <label for="q1">Wie entwickelt sind deine Kenntnisse, um im Internet zu kommunizieren?</label>
+              <select id="q1" onchange="updateScore('q1', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich verwende eigentlich immer die gleiche Ausdrucksweise, wenn ich mit anderen digital kommunziere (u. a. Wortschatz, Anrede, Emojis).</option>
+                <option value="c">Ich passe meinen Umgangston meiner Zielgruppe an. Ich verwende bspw. Sprachen, Slang, Bilder, Emojis und verschiedene Arten von Medien (u. a. Kurznachricht, Mail, Videoanruf) mit Bedacht auf die Empfänger/-innen.</option>
+                <option value="d">Ich habe die Fähigkeit, mich in andere Individuen hineinzuversetzen und passe meine digitale Kommunikation so an, dass ich die Gefühlslage meines Gegenübers nicht störe und dennoch meine Mei-nung klar ausdrücke.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q2">Wie gut kannst du mittels digitaler Technologien mit anderen in Kontakt treten?</label>
+              <select id="q2" onchange="updateScore('q2', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kann mittels Handy, Internettelefonie (sog. Voice Over IP wie z. B. Skype), E- Mail oder Chat unter Verwendung grundlegender Funktionen kommunizieren (z. B. Sprachnachrichten, SMS, E-Mails).</option>
+                <option value="c">Ich kann erweiterte Funktionen verschiedener Kommunikations-Tools verwenden (z. B. Verwenden von Voice Over IP und File-Sharing).</option>
+                <option value="d">Ich kann eine Vielzahl an Kommunikations-Tools aktiv nutzen und kenne deren Vor- und Nachteile (E-Mail, Chat, SMS, Instant Messaging, Blogs, Micro-Blogs, Soziale Netzwerke).</option>
+              </select>
+            </li>
+            <li>
+              <label for="q3">Bist du in der Lage, digitale Inhalte zu erstellen?</label>
+              <select id="q3" onchange="updateScore('q3', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kann einfache digitale Inhalte (z. B. Texte, Ta-bellen, Bilder, Audiodateien) in mindestens einem Format mittels digitaler Tools produzieren.</option>
+                <option value="c">Ich kann komplexe Inhalte (z. B. Texte, Tabellen, Bilder, Audiodateien) in div. Formaten mit digitalen Tools produzieren. Ich kann Websites/Blogs anhand von Templates (z. B. Wordpress) benutzen.</option>
+                <option value="d">Ich kann komplexe multimediale Inhalte in div. Formaten mittels digitaler Plattformen, Tools und Umgebun-gen produzieren und modifizieren. Ich kann Websites programmieren.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q4">Kannst du digitale Inhalte formatieren bzw. editieren?</label>
+              <select id="q4" onchange="updateScore('q4', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kann Inhalte, die von anderen produziert wurden, problemlos editieren (z.B. Texte bearbeiten).</option>
+                <option value="c">Ich kann einfache Formatierungen (z. B. Einfügung von Fussnoten, Diagrammen, Tabellen) von Inhalten, die von mir oder anderen produziert wurden, vornehmen.</option>
+                <option value="d">Ich beherrsche fortgeschrittene Formatierungsfunktionen von div. Tools (z. B. Serienbriefe, Zusammenfügen von div. Dokumenten, Benutzung von Formeln, Makros, usw.)</option>
+              </select>
+            </li>
+            <li>
+              <label for="q5">Wie gut kennst du dich mit dem Urheberschutz (Copyright) aus?</label>
+              <select id="q5" onchange="updateScore('q5', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass quasi jeder Inhalt im Internet urheberrechtlich geschützt ist. Ich weiss, dass ich urheberrechtlich geschützte Inhalte unter dem Schweizer Recht zwar herunterladen darf, aber nicht unbegrenzt verbreiten (dazu zählen u. a. das Wiederhochladen und das Zugänglich machen in einer Cloud).</option>
+                <option value="c">Ich weiss, wie man urheberrechtlich geschützten Inhalt referenziert und weiterverwendet. Ich weiss, in welchen Situationen das Urheberrecht nicht gilt, z. B. wenn ich den Inhalt privat oder betriebsintern verwende (sog. Urheberrechtsschranken).</option>
+                <option value="d">Ich habe ein breites Wissen zum Urheberrecht. Ich kenne insbesondere verschieden Arten von Lizenzen und Urheberrechtsschranken.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q6">Wie gut bist du informiert darüber, welche gesetzlichen Regeln im Internet neben dem Urheberschutz gelten?</label>
+              <select id="q6" onchange="updateScore('q6', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich bin mir bewusst, dass ich eine Person um Erlaubnis bitten sollte, bevor ich Fotos über sie veröffentliche oder teile.</option>
+                <option value="c">Bevor ich einen neuen Dienst nutze, mache ich mich zunächst
+                  stets mit den Allgemeinen Geschäftsbedingungen vertraut.
+                  </option>
+                <option value="d">Ich verfüge über ein umfangreiches Wissen in Bezug auf die rechtlichen Rahmenbedingungen, wenn ich etwas veröffentliche, kommentiere oder online kaufe oder verkaufe. Ich kenne insbesondere die Gesetze zum Datenschutz, unlauteren Wettbewerb, Strafrecht und Urheberrecht.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q7">Kennst und nutzt du Software und Programmiersprachen?</label>
+              <select id="q7" onchange="updateScore('q7', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass Programmiersprachen (z. B. Python, Visual Basic, Java, HTML, PHP, Excel-Makros) verwendet werden, um einem digitalen Gerät Anweisungen zur Ausführung einer Aufgabe zu geben</option>
+                <option value="c">Ich weiss, wie Programmeirsprachen in etwa funktionieren (z.B. Wissen, dass ein Code die Abfolge von Befehlen ist). </option>
+                <option value="d">Ich kann mindestens eine Programmiersprache selber anwenden und damit Inhalte erstellen oder schon erstellte Inhalte verbessern.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q8">Wie bewandert bist du, wenn es darum geht, die Einstellungen auf deinen elektronischen Geräten zu verändern?</label>
+              <select id="q8" onchange="updateScore('q8', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Wenn ich die Einstellungen auf meinen Geräten, Programmen oder Apps verändern muss, hole ich mir Hilfe.</option>
+                <option value="c">Ich kann einfache Funktionen und Einstellungen von Softwares und Applikationen, die ich benutze, anwenden und modifizieren (z. B. Änderung von Standardeinstellungen).</option>
+                <option value="d">Ich kann auch weitergehende Einstellungen auf digitalen Geräten, Online-Diensten und Anwendungen anpassen (z. B. Datenschutz-einstellungen verwalten, Schriftgrösse des Browsers verändern oder ein neues WiFi-Passwort einstellen).</option>
+              </select>
+            </li>
+            <li>
+              <label for="q9">Wie viel weisst du über Software-Entwicklung?</label>
+              <select id="q9" onchange="updateScore('q9', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass eine bestimmte Aufgabe (z. B. Suche und Sortieren) durch verschiedene algorithmische Lösungen umgesetzt werden kann.</option>
+                <option value="c">Ich interessiere mich dafür, herauszufinden, wie eine Aufgabe in aufeinanderfolgende Teile zerlegt wird, um sie so von einem Computerprogramm erledigen zu lassen.</option>
+                <option value="d">Ich weiss sehr gut Bescheid darüber, wie Computerprogramme und Websites entwickelt und aufgebaut werden und wie sie funktionieren.</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="kategorie">
+        <li>
+          <h2>Sicherheit</h2>
+          <ul>
+            <li>
+              <label for="q1">Wie ist dein Wissen über die Zugangssicherung zu deinen digitalen Konten?</label>
+              <select id="q1" onchange="updateScore('q1', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Mir ist bewusst, dass meine Anmeldedaten (Nutzername und Pass-wort) gestohlen werden können.</option>
+                <option value="c">Ich benutze verschiedene Passwörter und ändere diese regelmässig.</option>
+                <option value="d">Wo immer möglich, verwende ich eine Zwei-Faktor-Authentifizierung</option>
+              </select>
+            </li>
+            <li>
+              <label for="q2">Wie aufmerksam bist du gegenüber Phising-Versuchen?</label>
+              <select id="q2" onchange="updateScore('q2', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass ich nicht ohne Bedacht private Daten online preisgeben sollte.</option>
+                <option value="c">Ich weiss, woran ich betrügerische E-Mails und Websites erkenne. E-Mails: z.B. anhand des Absenders, des Texts in der Mail oder der verwendeten Sprache. Websites: z.B. anhand des Sicherheitszertifikats/ Schlosses in der Adressleiste meines Browser.
+                  </option>
+                <option value="d">Ich weiss, wie ich mich vor Missbräuchen im Internet wie bspw. Identitätsdiebstahl schützen kann.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q3">Wie gehst du mit deinen persönlichen Daten um?</label>
+              <select id="q3" onchange="updateScore('q3', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, welche persönlichen Daten ich nicht online teilen und anzeigen sollte, bspw. in Blogs, sozialen Netzwer-ken wie Facebook oder via Messenger-Diensten wie WhatsApp.</option>
+                <option value="c">Ich überlege immer sorgfältig, bevor ich persönli-he Daten (wie Adresse, Geburtstag, Profilbild, Zivilstand oder politische Ansicht) im Internet zugänglich mache.</option>
+                <option value="d">Wenn ich bspw. etwas kritisiere oder lobe, achte ich sehr darauf, wie sich die Online-Aktivität auf das Leben, den Ruf und die Karriere von mir und Anderen auswirken kann.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q4">Bist du dir deines digitalen Fussabdrucks bewusst?</label>
+              <select id="q4" onchange="updateScore('q4', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kann problemlos zwischen weniger sensiblen und sensibleren Daten unterscheiden (d. h. Informationen mit mehr oder weniger Schadenpotenzial in den falschen Händen). Weniger sensibel: z. B. Name, Adresse, Profilbild.
+                Sensibel: z. B. Kreditkar-ten, Krankenakten, Steu-erinformationen.
+                  </option>
+                <option value="c">Ich weiss, wie ich beim Surfen das Teilen meines geografischen Standorts sowie Cookies verhindern oder einschränken kann.</option>
+                <option value="d">Ich habe ein umfangreiches Wissen, wie man meinen digitalen Fussabdruck (persönlichen Daten wie Profilbild, frühere Kommentare, Adresse, Job, Ausbildung, etc.) suchen und finden kann.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q5">Erkennst du und wie reagierst du auf unangebrachte Äusserun-gen im Internet?</label>
+              <select id="q5" onchange="updateScore('q5', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich erkenne, ab wann eine Aussage eine Einschüchterung, Belästigung, Schikane oder die Verbreitung von Gerüchten und Geheimnissen darstellt und unangemessen ist.</option>
+                <option value="c">Ich habe eine gute Strate-gie, um auf beleidigende Kommentare oder E-Mails zu antworten, insbesondere durch Zeigen von Empathie (z. B. "Schade, dass Sie so reagieren. Ihre Aussage verursacht bei den Betroffenen psychischen Schmerz").</option>
+                <option value="d">Ich erkenne illegale Aussagen im Internet und ergreife die richtigen Massnahmen bedarfsgerecht (z. B. Melden beim Betreiber).</option>
+              </select>
+            </li>
+            <li>
+              <label for="q6">Wie gut kennst du dich mit dem Schutz deiner mentalen Gesundheit im Kontext digitaler Technologien aus?</label>
+              <select id="q6" onchange="updateScore('q6', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass eine zu extensive Nutzung digitaler Technologien meinem psychischen Wohlbefinden schaden kann.</option>
+                <option value="c">Ich weiss, dass ich die Zeit, während der ich digitale Geräte benutze, regulieren sollte.</option>
+                <option value="d">Ich bin sehr bedacht auf einen ausgewo-genen Umgang mit Technologie. Ich beobachte bspw., ob der Umgang mit Technologie meinen Schlaf oder meinen Stresslevel beeinflusst.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q7">Kennst du die Risiken für dein physisches Wohlbefinden beim Umgang, die mit digitalen Technologien einhergehen?</label>
+              <select id="q7" onchange="updateScore('q7', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass mit der Arbeit am Computer Risi-ken für mein körperliches Wohlbefinden verbunden sind.</option>
+                <option value="c">Ich kenne die Prinzipien eines ergonomischen Arbeitsplatzes und einer gesunden Haltung (z. B. Beinposition, Bildschirm-höhe, ergonomische Arbeitsgeräte).</option>
+                <option value="d">Ich beobachte genau, ob ich körperliche Symptome entwickle, die auf eine ungesunde Haltung oder einen nicht ergonomischen Arbeitsplatz zurückzuführen sein </option>
+              </select>
+            </li>
+            <li>
+              <label for="q8">Wie vertraut bist du mit dem Datenschutzgesetz?</label>
+              <select id="q8" onchange="updateScore('q8', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kenne die grundlegendsten Vorgaben des Schweizer Datenschutzgesetzes (bspw. keine Datenerhebung oder -bearbeitung ohne Einwilligung oder gesetzliche Grundlage, oder Speicherung der Daten nur solange nötig)</option>
+                <option value="c">Ich weiss, dass die EU-Datenschutzrichtlinie auch zwischen mir und einem Anbieter aus der EU gilt, auch wenn ich mich in der Schweiz befinde (auf-grund dessen ich z. B. gefragt werde, ob ich Cookies akzeptieren möchte).</option>
+                <option value="d">Ich weiss, dass in der Schweiz bald ein neues Datenschutzgesetz in Kraft treten wird/im Sommer in Kraft getreten ist, das der EU-Datenschutzverordnung sehr ähnlich ist.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q9">Wie gut kannst dich vor Viren schützen?</label>
+              <select id="q9" onchange="updateScore('q9', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich verstehe, dass es im Internet wie auch in meinem E-Mail-Postfach Schadsoftware geben kann und ich diesbezüglich stets Achtung walten lassen muss.</option>
+                <option value="c">Ich bin mir bewusst, dass es für die Abwehr von Schadsoftware wichtig ist, das Betriebssystem, Anti-Viren- wie auch meine anderen Programme stets auf dem neusten Stand zu halten.</option>
+                <option value="d">Ich kann Sicherheitseinstellungen vornehmen (bspw. betreffend meiner Firewall), kenne mein Anti-Viren-Programm und mache immer die nötigen Updates.</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="kategorie">
+        <li>
+          <h2>Problemlöseverhalten</h2>
+          <ul>
+            <li>
+              <label for="q1">Wie viel weisst du über die Wirkung von digitalen Technologien auf die Umwelt?</label>
+              <select id="q1" onchange="updateScore('q1', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich bin mir bewusst, dass der Betrieb digitaler Geräte und des Internets heu-te einer der grössten Stromverbraucher ist.</option>
+                <option value="c">Ich versuche, den Energieverbrauch meiner Geräte zu reduzieren (z. B. Einstellungen ändern, Apps schliessen, Wifi ausschalten).</option>
+                <option value="d">Ich versuche stetig, neue Wege zu finden, wie ich mithilfe von digitalen Technologien gesamthaft umweltfreundlicher leben und konsumieren kann (z. B. effizientere Ressourcennutzung etwa durch Shared Economy)</option>
+              </select>
+            </li>
+            <li>
+              <label for="q2">Wie bewusst sind dir die Zugangsschwierigkeiten von älteren Menschen und Menschen mit besonderen Bedürfnissen?</label>
+              <select id="q2" onchange="updateScore('q2', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich bin mir bewusst, dass vor allem ältere Menschen und Menschen mit besonderen Bedürfnissen teilweise de facto von der Benutzung des Internets ausgeschlossen sind, wenn sie zum Beispiel unter einer Sehschwäche leiden.</option>
+                <option value="c">Ich weiss über digitale Hilfsmittel Bescheid, die älteren Menschen oder Menschen mit besonderen Bedürfnissen helfen können (z. B. Vorlese-Funktionen oder vergrös-serte Darstellung).</option>
+                <option value="d">Ich bin bereit, Menschen in meiner Ge-meinschaft zu helfen, ihre digitalen Fähig-keiten zu verbessern.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q3">Wie gut kannst du Probleme und Aufgaben in der analogen Welt mit digitalen Mitteln lösen?</label>
+              <select id="q3" onchange="updateScore('q3', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kann digitale Anwendungen einsetzen, um nicht-technologische Probleme zu lösen (z. B. Navigation mittels Google Maps, Berechnungen oder Scannen auf dem Smartphone).  </option>
+                <option value="c">Wenn ich im Privat- oder Berufsleben eine Aufgabe habe, überlege ich stets, ob es auch einen Lösungsweg via digitaler Technologien geben könnte, der effizienter ist als die analoge Alternative.</option>
+                <option value="d">Wenn ich im Privat- oder Berufsleben eine Aufgabe habe, überlege ich stets, ob es auch einen Lösungsweg via digitaler Technologien geben könnte, der effizienter ist als die analoge Alternative.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q4">Wie gut kannst du dir bei der Lösung techni-scher Probleme hel-fen?</label>
+              <select id="q4" onchange="updateScore('q4', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kann Unterstützung und Hilfestellung finden, wenn ein technisches Problem auftritt oder wenn ich ein neues Ge-rät, Programm oder eine neue Anwendung benutze. Z. B. frage ich bei einer Kollegin/einem Kollegen nach oder suche im Internet.</option>
+                <option value="c">Ich kann die regelmässig auftretenden Probleme, die bei der Nutzung digitaler Technologien auftreten, ohne fremde Hilfe lösen. Wenn bspw. meine Internetverbindung nicht funktioniert, weiss ich, dass es daran liegen könnte, dass ich ausserhalb der Reichweite des WLANs bin oder der Flugmodus eingeschaltet ist.</option>
+                <option value="d">Ich habe bei fast allen Problemen, die mit der Nutzung digitaler Technologien entstehen, sofort mindestens eine Idee und bin damit zumeist erfolgreich.  </option>
+              </select>
+            </li>
+            <li>
+              <label for="q5">Wie leicht fällt es dir, die passende digitale Lösung für ein Problem oder eine Aufgabe zu finden?</label>
+              <select id="q5" onchange="updateScore('q5', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass verschiedene Geräte, Programme und Übertragungsarten verschiedene Vor- und Nachteile haben, von denen ich einige wenige benennen kann (z. B. Smartphone vs. Tablet im Ausseneinsatz; Bild vs. Text).</option>
+                <option value="c">Ich habe ein umfangreiches Wissen über die Vor- und Nachteile der unterschiedlichen Geräte und Programme und bin gut darin, die beste Option für meine Bedürfnisse auszuwählen. Bspw. nimmt es für mich weniger Zeit in Anspruch, eine  Sprachnachricht zu verfassen; dafür übermittelt eine geschriebene Nachricht die Information synthetisiert und ist damit effizienter für den/die Empfänger/-in.</option>
+                <option value="d">Ich habe nicht nur vertiefte Kenntnisse über verschiedene Geräte, Programme und Übertragungsarten, ich kann auch überdurchschnittlich viele davon anwenden.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q6">Wie umfangreich ist dein Wissen über digitale Werkzeuge?</label>
+              <select id="q6" onchange="updateScore('q6', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich weiss, dass digitale Technologie als leistungsfähiges Werkzeug zur Innovation von Prozessen und Produkten eingesetzt werden kann.</option>
+                <option value="c">Ich kann abschätzen, wann eine Technologie das Lösen einer Aufgabe oder einen Prozess unterstützen kann und wann nicht.</option>
+                <option value="d">Ich kann Datenwerkzeuge wie Data-Mining und Analyse-Software anwenden und damit Entscheide faktenbasiert fällen und zu vertreten.</option>
+              </select>
+            </li>
+            <li>
+              <label for="q7">Wie gut kennst du dich mit elektronischen Ge-räten aus?</label>
+              <select id="q7" onchange="updateScore('q7', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich bin vertraut mit den zentralsten Funktionen der verbreiteten elektronischen Geräte (z.B. Computer oder Smartphone benutzen).</option>
+                <option value="c">Ich weiss über technische Lösungen Bescheid, die mir den Zugang und die Nutzung digitaler Technologien erleichtern können (bspw. Sprachübersetzung, Vorlese-Funktion, Vergrösserung oder Zoom).</option>
+                <option value="d">Ich bin problemlos dazu imstande, die Konfigurationen des Betriebssystems meiner elektronischen Geräte an meine Be-dürfnisse anzupassen (z. B. automatisches Stoppen/Starten von Diensten, Ändern von Registrierungsschlüsseln).</option>
+              </select>
+            </li>
+            <li>
+              <label for="q8">Wie geschult ist dein technisches Verständ-nis?</label>
+              <select id="q8" onchange="updateScore('q8', 'score1')">
+                <option value="">Bitte auswählen</option>
+                <option value="a">Damit bin ich nicht vertraut.</option>
+                <option value="b">Ich kenne die grundlegendsten Komponenten eines Computers (Hard-ware, Software, Tower, Bildschirm).</option>
+                <option value="c">Ich weiss sehr gut über den Aufbau eines Computers Bescheid (CPU, RAM, Motherboards, etc.)</option>
+                <option value="d">Ich weiss, wie ein Computer in einem Netzwerk interagiert (Kabel, Netzwerk-Router) und wie letzteres aufgebaut ist (Verbindung zwischen Websites, Domains, Servern).</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </ul>
+    <button id="submit-button">Umfrage beenden</button>
+    <script src="script.js"></script>
+  </body>
+</html>
