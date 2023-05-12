@@ -1,14 +1,22 @@
 .kategorie {
-  color: brown;
-  background-color: yellow;
+  color: rgb(0, 0, 0);
+  background-color: rgb(173, 173, 173);
   margin: 2cm;
-  border: 5px solid black;
+  padding-right: 25px;
+  padding-top: 20px;
+  border: 2px solid black;
+  border-style: dashed;
   text-align: center;
 }
 
 h1 {
   text-align: center;
-  color: blue;
+  padding-top: 50px;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
 }
 
 ul {
