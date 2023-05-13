@@ -68,3 +68,22 @@ body {
 .chart-legend-label {
   font-size: 14px;
 }
+
+.link-button {
+  display: block;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.styled-link {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+    background-color: lightblue;
+}
