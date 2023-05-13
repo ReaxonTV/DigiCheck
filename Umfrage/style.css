@@ -40,6 +40,16 @@ ul {
   margin-bottom: 20px;
 }
 
+.button {
+  background-color: #379ac8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 /* Stil des Modal-Fensters */
 .modal {
   display: none; /* Verstecken Sie das Modal-Fenster standardmäßig */

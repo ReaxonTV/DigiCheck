@@ -23,7 +23,7 @@ var data = {
   ],
   datasets: [
     {
-      label: "Wert",
+      label: "Dein Ergebnis",
       data: [
         kategorieScores.datenverarbeitung,
         kategorieScores.kommunikation,
@@ -37,6 +37,13 @@ var data = {
     },
     {
       label: "Durchschnitt aller Teilnehmer",
+      data: [1.2, 1.1, 0.7, 0.5, 1.2],
+      backgroundColor: "rgba(127, 84, 196, 0.1)",
+      borderColor: "rgba(127, 144, 196, 0.8)",
+      borderWidth: 1,
+    },
+    {
+      label: "",
       data: [0, 0, 0, 0, 0],
       backgroundColor: "rgba(0, 0, 0, 0)",
       borderColor: "rgba(0, 0, 0, 0)",
