@@ -24,7 +24,7 @@ ul {
 }
 
 .kategorie label {
-  display: block;
+  display: flex;
   margin-bottom: 10px;
 }
 
