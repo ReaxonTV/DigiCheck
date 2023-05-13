@@ -35,4 +35,7 @@ Wir hoffen, dass unsere Abgabe für die Kantonsverwaltung Hilfreich sein wird be
 
 Vielen Dank
 
-Namen und Credits:
+
+Dieses Projekt wurde durchgeführt von:
+
+Lukas Zemp (Student Data Science FHNW), Benjamin Würmli (Student Data Science FHNW) Joel Bettler , Simon Erni (Student Wirtschaftsinformatik BFH) , Benjamin Würmli (Student Wirtschaftsinformatik BFH), Simon Rofalski (Student Wirtschaftsinformatik BFH)
