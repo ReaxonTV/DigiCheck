@@ -59,7 +59,7 @@ submitButton.addEventListener("click", function () {
     kommunikation: kategorieScores.kommunikation / 6,
     erstellung: kategorieScores.erstellung / 9,
     sicherheit: kategorieScores.sicherheit / 9,
-    problemloesung: kategorieScores.problemloesung / 6,
+    problemloesung: kategorieScores.problemloesung / 8,
   };
 
   results["durchschnittScores"] = durchschnittScores;
@@ -76,3 +76,32 @@ submitButton.addEventListener("click", function () {
 
   console.log("Aggregated results saved to local storage");
 });
+
+// Holen Sie sich das Modal-Fenster und die Schaltfläche
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("submit-button");
+
+// Holen Sie sich das Schließ-Symbol und fügen Sie einen Klick-Handler hinzu, um das Fenster zu schließen
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// Fügen Sie einen Klick-Handler zur Schaltfläche hinzu, um das Modal-Fenster anzuzeigen
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+function showConfirmPopup() {
+  var popup = document.getElementById("confirm-popup");
+  var progressBar = document.getElementById("progress-bar");
+
+  popup.style.display = "block";
+
+  progressBar.classList.add("active");
+
+  setTimeout(function () {
+    popup.style.display = "none";
+    progressBar.classList.remove("active");
+  }, 3000);
+}

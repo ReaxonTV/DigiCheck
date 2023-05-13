@@ -566,7 +566,14 @@
         </li>
       </div>
     </ul>
-    <button class="button" onclick="window.location.href='../Auswertung/index2.html'" id="submit-button" style="position: absolute; left: 45%;">Umfrage speichern & beenden</button>
+<div id="confirm-popup">
+  <p>Vielen Dank für das Ausfüllen!</p>
+  <div id="progress-bar"></div>
+</div>
+
+
+    
+    <button class="button" onclick="showConfirmPopup(); window.location.href='../Auswertung/index2.html'" id="submit-button" style="position: absolute; left: 45%;">Umfrage speichern & beenden</button>
     <script src="script.js"></script>
   </body>
 </html>
