@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="../icons/Bern.png" />
     <meta charset="UTF-8" />
     <title>Auswertung DigiCheck</title>
     <link rel="stylesheet" href="style2.css" />
     <!-- <link rel="stylesheet" href="../styles.css" /> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <title>DigiCheck</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
@@ -41,32 +49,20 @@
   </head>
 
   <div class="topnav">
-    <a class="active" href="../index.html">Home</a>
-    <a href="#Profil">Profil</a>
+    <a href="../index.html">Home</a>
+    <a href="../Profil/index.html">Profil</a>
     <a href="../Umfrage/index.html">Umfrage</a>
-    <a href="index2.html">Auswertung</a>
+    <a class="active" href="index2.html">Auswertung</a>
   </div>
 
   <body>
-    <!-- <header>    
     <div class="container">
-      <div class="sidebar">
-        <button onclick="window.location.href='../index.html'" class="button"><img src="../icons/home.png" style="padding-right: 2px;" width="30px" height="30px">Home</img></button>
-        <button class="button"><img src="../icons/user.png" style="padding-right: 2px;" width="30px" height="30px">Profil</img></button>
-        <button onclick="window.location.href='../Umfrage/index.html'" class="button"><img src="../icons/clipboard.png" style="padding-right: 2px;" width="30px" height="30px">Umfrage</img></button>
-        <button onclick="window.location.href='index2.html'" class="button"><img src="../icons/chart.png" style="padding-right: 2px;" width="30px" height="30px">Auswertung</img></button>
-      </div>
-    </div>
-  </header> -->
-  
-
-  <div class="container">
       <div class="section">
         <h2>Dein persönliches Ergebnis</h2>
         <p>Hier ist deine persönliche Auswertung des DigiChecks:</p>
         <div id="chart-container">
-    <canvas id="myChart"></canvas>
-  </div>
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
       <div class="section">
         <h2>Erklärung der Bereiche</h2>
@@ -105,11 +101,35 @@
         </div>
       </div>
       <div class="section">
-        <h2>Deine Empfehlung</h2>
+        <h2>Ergebnisse und Empfehlung:</h2>
         <p>
-          Hier findest du eine Empfehlung, wie du dein Ergebnis verbessern
+          Nachfolgend findest du dein persönliches Ergebnis sowie entsprechende
+          Massnahmen, welche wir dir aufgrund deiner Resultate empfehlen.
+        </p>
+        <div id="ergebnisse">
+          <ul>
+            <li>
+              <b>Datenverarbeitung: </b><span id="datenverarbeitung"></span>
+            </li>
+            <li><b>Kommunikation: </b><span id="kommunikation"></span></li>
+            <li>
+              <b>Erstellung von Inhalten: </b><span id="erstellung"></span>
+            </li>
+            <li><b>Sicherheit: </b><span id="sicherheit"></span></li>
+            <li><b>Problemlösung: </b><span id="problemloesung"></span></li>
+          </ul>
+        </div>
+        <p>
+          Aufgrund deines Ergebnisses findest du nachfolgend diverse Links zu
+          Material & Unterlagen, wie du deine digitalen Skills verbessern
           kannst:
         </p>
+        <div
+          id="link-container"
+          class="d-flex flex-wrap justify-content-around"
+        >
+          <!-- Links will be inserted here -->
+        </div>
         <br />
         <script src="auswertung.js"></script>
         <!-- Hier kommt die Empfehlung -->

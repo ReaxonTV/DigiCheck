@@ -2,6 +2,7 @@
 
 <html lang="de">
   <head>
+    <link rel="icon" href="../icons/Bern.png" />
     <meta charset="utf-8" />
     <meta name="Umfrage" content="width=device-width, initial-scale=1" />
 
@@ -54,9 +55,9 @@
   </head>
 
   <div class="topnav">
-    <a class="active" href="../index.html">Home</a>
-    <a href="#Profil">Profil</a>
-    <a href="index.html">Umfrage</a>
+    <a href="../index.html">Home</a>
+    <a href="../Profil/index.html">Profil</a>
+    <a class="active" href="index.html">Umfrage</a>
     <a href="../Auswertung/index2.html">Auswertung</a>
   </div>
 
@@ -566,7 +567,11 @@
         </li>
       </div>
     </ul>
-    <button class="button" onclick="window.location.href='../Auswertung/index2.html'" id="submit-button" style="position: absolute; left: 45%;">Umfrage speichern & beenden</button>
+<div id="confirm-popup">
+  <p>Vielen Dank für das Ausfüllen!</p>
+  <div id="progress-bar"></div>
+</div>
+    <button class="button" onclick="showConfirmPopup(); return false;" id="submit-button" style="position: absolute; left: 45%;">Umfrage speichern &amp; beenden</button>
     <script src="script.js"></script>
   </body>
 </html>

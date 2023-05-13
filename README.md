@@ -25,3 +25,14 @@ Zur Erreichung unseres Ziels haben wir ein GitLab Repository erstellt, auf das a
 Danach haben wir die Tasks so aufgeteilt, damit alle gleichzeitig an einem Task arbeiten können und wir somit effizienter sind. 
 
 Fazit
+
+Alle aus unserer Gruppe nahmen zum ersten Mal an einem Hackathon teil. Obwohl wir am Anfang einige Schwierigkeiten hatten und sogar einen Neustart des Projekts vornehmen mussten, konnten wir es letztendlich erfolgreich abschließen.
+Als Gruppe hatten wir die Gelegenheit, viele neue Fähigkeiten zu erlernen und anzuwenden. Wir hatten auch die Möglichkeit, wertvolle Erfahrungen im Bereich der Projektarbeit und des Teamworks zu sammeln. Es war eine Herausforderung, in einer 5er Gruppe zusammenzuarbeiten, mit Leuten, die man vorher noch nicht kannte. Durch eine effektive Kommunikation und Zusammenarbeit konnten wir das Projektziel aber gemeinsam erreichen.
+
+Wir sind stolz auf das, was wir als Gruppe erreicht haben, und wir glauben, dass diese Erfahrung uns in zukünftigen Projekten und Karrieren von Nutzen sein wird. Wir haben gelernt, wie wichtig es ist, als Team zusammenzuarbeiten und die verschiedenen Fähigkeiten untereinander zu teilen. Insgesamt war das Projekt DigiCheck eine positive Erfahrung für uns. Wir sind froh, dass wir uns dieser Herausforderung gestellt haben.
+
+Wir hoffen, dass unsere Abgabe für die Kantonsverwaltung Hilfreich sein wird beim Erstellen der DigiZ Webseite und dass die Mitarbeitenden des Kantons mit Hilfe von unserer Arbeit ihre Kompetenzen ausbauen können. 
+
+Vielen Dank
+
+Namen und Credits:
