@@ -103,5 +103,9 @@ function showConfirmPopup() {
   setTimeout(function () {
     popup.style.display = "none";
     progressBar.classList.remove("active");
-  }, 3000);
+    setTimeout(function () {
+      window.location.href = "../Auswertung/index2.html";
+    }, 250);
+  }, 2000);
+  return false; // return false, um das Standardverhalten des Buttons zu verhindern
 }
