@@ -39,7 +39,7 @@ var data = {
       label: "Durchschnitt aller Teilnehmer",
       data: [2, 2.2, 2.5, 1, 2],
       backgroundColor: "rgba(143, 143, 143, 0.15)",
-      borderColor: "rgba(143, 143, 143, 0.8)",
+      borderColor: "rgba(143, 143, 143, 0.4)",
       borderWidth: 1,
     },
     {
