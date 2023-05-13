@@ -725,7 +725,7 @@ const domainLinks = [
 
 function generatepersonalizedLinks(scores, links) {
   let result = [];
-  const maxScore = 4;
+  const maxScore = 3;
   for (let i = 0; i < links.length; i++) {
     let score = scores[i];
     let linksToAdd = maxScore - score;
