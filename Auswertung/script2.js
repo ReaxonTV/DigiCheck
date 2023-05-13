@@ -690,20 +690,20 @@ const sicherheit = [
 
 const problemloesung = [
   {
-    text: "Text 1",
-    href: "https://module.fit4internet.at/kompetenzbereich4/infomodul/",
+    text: "Probleme lösem - in 6 Schritten zur Lösung",
+    href: "https://www.tk.de/techniker/magazin/life-balance/stress-bewaeltigen/probleme-loesen-2006878?tkcm=aaus",
   },
   {
-    text: "Text 2",
-    href: "https://www.skppsc.ch/de/themen/internet/hacking-malware/",
+    text: "Techniken und Tipps zur Problemlösung",
+    href: "https://www.wrike.com/de/blog/techniken-und-tipps-fuer-problemloesungen-die-tatsaechlich-funktionieren/",
   },
   {
-    text: "Text 3",
-    href: "https://www.jugendundmedien.ch/experten-und-fachwissen/politik-recht/was-ist-strafbar-im-netz",
+    text: "Stressabbau - systematisch managen",
+    href: "https://stressnostress.ch",
   },
   {
-    text: "Text 4",
-    href: "https://zahlen-fakten.suchtschweiz.ch/de/digitale-welt/rechtliche-grundlagen.html",
+    text: "Problemlösung -> Video für effizienten Stressabbau",
+    href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
 ];
 
@@ -725,39 +725,55 @@ const domainLinks = [
 
 function generatepersonalizedLinks(scores, links) {
   let result = [];
-  const maxScore = 3;
+  const maxScore = 4;
   for (let i = 0; i < links.length; i++) {
     let score = scores[i];
     let linksToAdd = maxScore - score;
+    list = [];
     for (let j = 0; j < linksToAdd; j++) {
       let randomIndex = Math.floor(Math.random() * links[i].length);
       if (links[i][randomIndex]) {
-        result.push(links[i][randomIndex]);
+        list.push(links[i][randomIndex]);
         // Remove the selected link from the array to avoid duplicates
         links[i].splice(randomIndex, 1);
       }
     }
+    result.push(list);
   }
   return result;
 }
 
 function addLinksToDOM(links) {
   const container = document.getElementById("link-container");
-  let ul = document.createElement("ul");
-  ul.className = "list-group";
-  links.forEach((link) => {
-    let li = document.createElement("li");
-    li.className = "list-group-item";
-    let a = document.createElement("a");
-    a.href = link["href"];
-    a.textContent = link["text"];
-    a.className = "btn btn-link styled-link";
-    a.target = "_blank";
-    li.appendChild(a);
-    li.style.marginBottom = "10px";
-    ul.appendChild(li);
+  const titles = [
+    "Datenverarbeitung - Empfehlungen",
+    "Kommunikation - Empfehlungen",
+    "Erstellung von Inhalten - Empfehlungen",
+    "Sicherheit - Empfehlungen",
+    "Problemlösung - Empfehlungen",
+  ];
+  links.forEach((linkList, index) => {
+    let h3 = document.createElement("h3");
+    h3.textContent = titles[index];
+    h3.className = "w-100";
+    container.appendChild(h3);
+    let ul = document.createElement("ul");
+    ul.className = "list-group w-100";
+    linkList.forEach((link) => {
+      let li = document.createElement("li");
+      li.className = "list-group-item w-100";
+      let a = document.createElement("a");
+      console.log(link["href"]);
+      a.href = link["href"];
+      a.textContent = link["text"];
+      a.className = "btn btn-link styled-link w-100";
+      a.target = "_blank";
+      li.appendChild(a);
+      li.style.marginBottom = "10px";
+      ul.appendChild(li);
+    });
+    container.appendChild(ul);
   });
-  container.appendChild(ul);
 }
 
 const personalizedLinks = generatepersonalizedLinks(userScores, domainLinks);
