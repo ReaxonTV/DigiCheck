@@ -68,3 +68,37 @@ body {
 .chart-legend-label {
   font-size: 14px;
 }
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+p {
+  margin-top: 10px;
+}
+
+.link-button {
+  display: block;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+.styled-link {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
+  background-color: lightblue;
+}
+
+#myChart {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  aspect-ratio: 1/1; /* Dies setzt das Seitenverhältnis des Diagramms auf 1:1 (gleich hoch und breit) */
+}
