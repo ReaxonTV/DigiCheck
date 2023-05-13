@@ -713,6 +713,7 @@ const userScores = [
   Math.round(kategorieScores.erstellung),
   Math.round(kategorieScores.sicherheit),
   Math.round(kategorieScores.problemloesung),
+  2,
 ];
 
 const domainLinks = [
@@ -721,6 +722,12 @@ const domainLinks = [
   produktion,
   sicherheit,
   problemloesung,
+  [
+    {
+      text: "BAG Empfehlungen",
+      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+    },
+  ],
 ];
 
 function generatepersonalizedLinks(scores, links) {
@@ -751,6 +758,7 @@ function addLinksToDOM(links) {
     "Erstellung von Inhalten - Empfehlungen",
     "Sicherheit - Empfehlungen",
     "Problemlösung - Empfehlungen",
+    "obligatorisch",
   ];
   links.forEach((linkList, index) => {
     let h3 = document.createElement("h3");
