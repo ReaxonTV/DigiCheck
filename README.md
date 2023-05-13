@@ -25,6 +25,7 @@ Zur Erreichung unseres Ziels haben wir ein GitLab Repository erstellt, auf das a
 Danach haben wir die Tasks so aufgeteilt, damit alle gleichzeitig an einem Task arbeiten können und wir somit effizienter sind. 
 
 Fazit
+
 Alle aus unserer Gruppe nahmen zum ersten Mal an einem Hackathon teil. Obwohl wir am Anfang einige Schwierigkeiten hatten und sogar einen Neustart des Projekts vornehmen mussten, konnten wir es letztendlich erfolgreich abschließen.
 Als Gruppe hatten wir die Gelegenheit, viele neue Fähigkeiten zu erlernen und anzuwenden. Wir hatten auch die Möglichkeit, wertvolle Erfahrungen im Bereich der Projektarbeit und des Teamworks zu sammeln. Es war eine Herausforderung, in einer 5er Gruppe zusammenzuarbeiten, mit Leuten, die man vorher noch nicht kannte. Durch eine effektive Kommunikation und Zusammenarbeit konnten wir das Projektziel aber gemeinsam erreichen.
 
