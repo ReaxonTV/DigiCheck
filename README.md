@@ -34,3 +34,5 @@ Wir sind stolz auf das, was wir als Gruppe erreicht haben, und wir glauben, dass
 Wir hoffen, dass unsere Abgabe für die Kantonsverwaltung Hilfreich sein wird beim Erstellen der DigiZ Webseite und dass die Mitarbeitenden des Kantons mit Hilfe von unserer Arbeit ihre Kompetenzen ausbauen können. 
 
 Vielen Dank
+
+Namen und Credits:
